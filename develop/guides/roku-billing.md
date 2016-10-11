@@ -16,7 +16,7 @@ This guide will focus on setting up an in-channel product and how to use that pr
 **The primary steps for this tutorial are:**
 
 1.  [Install the sample Roku Billing channel](#install-the-sample-roku-billing-channel)
-2.  [Packaging and publishing the sample channel](#packaging-publishing-the-sample-channel)
+2.  [Packaging and publishing the sample channel](#packaging-and-publishing-the-sample-channel)
 3.  [Add an in-channel product to your Roku developer account](#add-an-in-channel-product-to-your-roku-developer-account)
 4.  [Testing the in-channel product and sample code overview](#testing-the-in-channel-product-and-sample-code-overview)
 5.  [Addendum: How to setup a pay-to-install channel](#addendum-how-to-setup-a-pay-to-install-channel)
@@ -25,7 +25,7 @@ This guide will focus on setting up an in-channel product and how to use that pr
 
 ## Install the sample Roku Billing channel
 
-Download the [signup sample channel](https://roku.box.com/s/puqgslcujkt364cfit7a4zwx1hfps5ew). Refer to the **[Developer Setup Guide](/develop/getting-started/setup-guide)** on how to install (or "sideload") channels onto a Roku device.
+Download the [signup sample channel](https://roku.box.com/s/puqgslcujkt364cfit7a4zwx1hfps5ew). Refer to the **[Developer Setup Guide](/develop/getting-started/setup-guide.md)** on how to install (or "sideload") channels onto a Roku device.
 
 ![](../../images/development-application-installer.png)
 
@@ -71,7 +71,7 @@ Click on **Package** and a few short moments later you can download the signed p
 
 ### D. Creating a private channel
 
-The next step is to create a private channel with the signed package we just generated. On the [**Developer Dashboard**](https://developer.roku.com/developer), select [**Manage My Channels**](https://developer.roku.com/developer-channels/channels) and [**Add Channel**](https://developer.roku.com/apps/create/private) on the following page.
+The next step is to create a private channel with the signed package we just generated. On the [**Developer Dashboard**](https://developer.roku.com/developer), select [**Manage My Channels**](https://developer.roku.com/developer-channels/channels) and **Add Channel** on the following page.
 
 ![](../../images/add-new-channel.png)
 
@@ -325,7 +325,7 @@ To set up a channel with pay-to-install pricing, on the **Monetization** page, s
 
 ![](../../images/pay-to-install.png)
 
-You can the select the **Purchase Type**: one-time purchase, monthly subscription or yearly subscription, and a corresponding **Price Tier**.
+You can then select the **Purchase Type**: one-time purchase, monthly subscription or yearly subscription, and a corresponding **Price Tier**.
 
 **Related resources:**
 
