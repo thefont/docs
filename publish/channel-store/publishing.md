@@ -37,154 +37,173 @@ Private channels are another way to distribute channels on the Roku platform. Th
 
 ## Create a public channel
 
-On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/apps)** and **[Add Public Channel](https://developer.roku.com/apps/create/public)** on the following page.
+On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/apps)** and **Add Channel** on the following page.
 
-### Channel Properties
+![](../../images/add-new-channel.png)
 
-On the **Channel Properties** page, select any monetization models that apply and click `Continue`.
+Next, select **Developer SDK**, **Public**, and enter a **Channel Name**.
 
-![](../../images/ch-properties-monetize.png)
+![](../../images/add-sdk-public-channel.png)
 
-Fill out the channel properties:
+### Properties
+
+Fill out the following properties:
 
 * **Channel Stores**: regions the channel will be available in
-* **Languages**: Languages to localize the Channel Store icons, descriptions and screenshots for
+* **Languages**: Languages to localize the Channel Store poster, descriptions and screenshots for
 * **Required Features**:
  * USB Support: Select this only if the channel requires a Roku with a USB port to function
  * Screensaver: Select this only if the channel is/contains a screensaver
  * Roku Game Remote: Select this only if the channel requires a remote with A & B buttons to function
 * **Classification**: Select the option that best describes the channel type
 * **Internet Connection Required**: Yes/No
+* **CVAA Compliance**: Yes/No
 * **Parental Hint**: Select the best rating for the content in the channel. If unsure, select Content Not Rated.
 * **Vanity Access Code**: Add a unique string of characters to make sharing the channel easier (ex. https://my.roku.com/add/myrokuchannel). The Vanity access code is only available after a channel has been published.
 
-![](../../images/dev-dashboard-ch-properties.png)
+![](../../images/public-properties.png)
 
-### Channel Descriptions
+### Channel Store Info
 
-On the **Channel Descriptions** page, fill in:
+On the **Channel Store Info** page, edit:
 
-* name of the channel
-* descriptions
-* keywords for channelstore.roku.com
-* preferred Channel Store categories
+* description(s)
+* preferred Channel Store category for each region
 
-and upload the Channel Store icons.
+and upload the Channel Store Poster (540x405).
 
-_Note: If multiple languages were selected on the Channel Properties page, the Channel Descriptions page will have a separate section for each language for locale-specific descriptions and Channel Store icons._
+> :information_source: If multiple languages were selected on the Channel Properties page, the Channel Descriptions page will have a separate section for each language for locale-specific descriptions and Channel Store icons.
 
-![](../../images/dev-dashboard-ch-descriptions.png)
+![](../../images/ch-store-info.png)
 
-### Channel Pricing / pay-to-install
+### Monetization
 
-If **Customers will pay before installing my channel** was selected on the monetization questionnaire and you’ve enrolled in Roku Billing Services, the **Channel Pricing** page will be presented.
+On the **Monetization** page, select how you plan to monetize your channel. If your channel contains ads, it must use the [Roku Ad Framework](/develop/guides/roku-ad-framework.md).
 
-![](../../images/dev-dashboard-ch-pricing.png)
+> :information_source: Monetizing via ads requires enrollment in Roku Billing Services as you'll receive a revenue share from ads backfilled by Roku.
 
-On this page, the type of pay-to-install model (one-time, monthly subscription or yearly subscription) and a corresponding price tier can be selected.
+![](../../images/public-channel-monetize.png)
+
+If **Customers will pay before installing my channel** is selected and you’ve enrolled in [Roku Billing Services](developer.roku.com/enrollment/billing), the **Pricing** section will be presented below.
+
+![](../../images/channel-pricing.png)
+
+In this section, the type of pay-to-install model (one-time, monthly subscription or yearly subscription) and a corresponding price tier can be selected.
 
 ### Screenshots
 
-On the next page, upload any screenshots for display in the Channel Store. Up to 6 HD (1280x720) and 6 FHD (1920x1080) images can be uploaded for each locale.
+On the next page, upload any screenshots for display in the Channel Store. Up to 6 FHD (1920x1080) images can be uploaded for each locale.
 
-Refer to the [Screenshots](/develop/developer-tools/developer-settings.md#screenshot-utility) section under [Developer Settings](/develop/developer-tools/developer-settings.md) for instructions on taking channel screenshots.
+> :information_source: Refer to the [Screenshots](/develop/developer-tools/developer-settings.md#screenshot-utility) section under [Developer Settings](/develop/developer-tools/developer-settings.md) for instructions on taking channel screenshots.
 
-![](../../images/dev-dashboard-ch-screenshots.png)
+![](../../images/public-channel-screenshots.png)
 
 Once the screenshots have been uploaded, select `Continue`.
 
 ### Support Information
 
-Before we proceed with the package submission, click on **Support Information** and fill in all required fields.
+Fill out the required contact and support information and any test accounts as needed for Roku to review your submission.
 
-![](../../images/dev-dashboard-ch-support-info.png)
+![](../../images/public-channel-support-info.png)
 
-### Package Submission
+### Package Upload
 
-On the **Package Submission** page, select:
+On the **Package Upload** page, select:
 
 * Channel Version
 * Minimum firmware version required to run the channel
 * Application Package: Select signed package for publication
 
-and then click on `Save Changes`.
+and then click `Continue`.
 
-![](../../images/dev-dashboard-ch-package-submission.png)
+![](../../images/package-upload.png)
 
-After the package has been uploaded, there should now be an **Access Code** available and the `Submit` button should also be selectable.
+### Preview and Publish
 
-![](../../images/dev-dashboard-ch-submit.png)
+Before selecting `Publish` to submit for Roku [certification review](/publish/channel-store/certification.md), you can select the `access code` to add the channel to your device and also make sure it has been thoroughly tested and reviewed against the **[pre-certification channel checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2)**.
 
-Before submitting, make sure the channel has been thoroughly tested and reviewed against the **[pre-certification channel checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2)**.
+![](../../images/public-preview-publish.png)
 
-### Key Dates
-Click `Submit` and fill in any key publishing dates.
+### Submission Survey
 
-![](../../images/dev-dashboard-ch-submission-survey.png)
+When ready, select `Publish` and fill in any **Release Notes** and **Key Dates** as necessary.
 
-Select `Continue` to return to the **Package Submission** page.
+![](../../images/submission-survey.png)
 
-![](../../images/dev-dashboard-ch-submission-cancel.png)
+Select `Continue` to complete your submission and return to the **Preview and Publish** page.
+
+![](../../images/cancel-public-submission.png)
 
 Once the channel has been submitted, it will be reviewed by Roku and:
 
 * published if it has passed certification
-* or receive a list of issues that need to be addressed before publication
+* or you will receive a list of issues that need to be addressed before publication
 
 ## Create a private channel
-On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/apps)** and **[Add Private Channel](https://developer.roku.com/apps/create/private)** on the following page.
 
-Likewise with public channels, select the monetization method(s).
+On the [**Developer Dashboard**](https://developer.roku.com/developer), select [**Manage My Channels**](https://developer.roku.com/developer-channels/channels) and **Add Channel** on the following page.
 
-![](../../images/private-channel-monetize.png)
+![](../../images/add-new-channel.png)
 
-Fill out the channel properties, descriptions and Channel Store icons as needed.
+Next, select **Developer SDK**, **Private**, and enter a **Channel Name**.
+
+![](../../images/add-custom-sdk-private-channel.png)
+
+#### Properties
+
+On the properties page, all the default values selected will be fine to use but you can adjust as needed.
 
 ![](../../images/private-channel-properties.png)
 
-![](../../images/private-channel-descriptions.png)
+#### Channel Store Info
 
-_Note: Screenshots can be omitted for private channels._
+Edit the channel's description as needed, upload a Channel Store poster (540x405), and select a preferred category.
 
-On the screenshots page, click `Continue`. On the **Package Submission** page, `Select` the signed package for publication and click on `Save Changes`.
+![](../../images/private-channel-ch-store-info.png)
 
-![](../../images/private-channel-package-upload.png)
+#### Monetization
 
-After the package has been uploaded, there should now be an **Access Code** available and the `Submit` button should also be selectable.
+On the Monetization page, select how you plan to monetize your channel.
 
-![](../../images/private-channel-submit.png)
+![](../../images/private-channel-monetization.png)
 
-Select `Submit` to successfully publish the channel.
+#### Package Upload
 
-![](../../images/private-channel-published.png)
+ **Upload** your signed package and click **Continue**.
 
-The package details will be shown on the right and the status will update to Published.
+![](../../images/package-upload.png)
+
+#### Preview and Publish
+
+On the Preview and Publish page, select **Publish** at the bottom.
+
+![](../../images/private-channel-preview-publish.png)
 
 ## Update an existing channel
 
-Updating a channel follows many of the same steps as submitting a new channel. On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/apps)** and select the channel that needs to be updated.
+Updating a channel follows many of the same steps as submitting a new channel. On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/developer-channels/channels)** and select the channel that needs to be updated.
 
-If none of the Channel Properties or Descriptions need to be updated, click on **Edit Channel** to go directly to the **Package Submission** page.
+If none of the Properties or Channel Store Info needs to be updated, click on **Package Upload** to submit a new version.
 
-![](../../images/dev-dashboard-edit-channel.png)
-
-On the **Package Submission** page, select:
+On the **Package Upload** page, select:
 
 * Channel Version
 * Minimum firmware required to run the channel
 * Application Package: Select signed package for publication
 
-and then click on `Save Changes`.
+and then click on `Continue`.
 
-_Note: Be sure to increment the channel’s major, minor, and build versions in the manifest as well as on the Roku Developer Portal for each package submitted._
+![](../../images/package-upload.png)
 
-**Public channels**: Click `Submit` to display the **Key Dates** page. In addition, there is also a section for **Release Notes**. Being as detailed as possible will help with the certification process.
+> :information_source: Be sure to increment the channel’s major, minor, and build versions in the manifest as well as the `Channel Version` on this page for each new package submitted.
 
-![](../../images/dev-dashboard-release-notes.png)
+**Public channels**: Click `Update` to display the **Submission Survey** page.
 
-Select `Continue` to finalize the submission and return to the **Package Submission** page. As with first time submissions, public channel updates will be reviewed by Roku and:
+![](../../images/submission-survey.png)
+
+Select `Continue` to finalize the submission and return to the **Preview and Publish** page. As with first time submissions, public channel updates will be reviewed by Roku and:
 
 * published if it has passed certification
-* or receive a list of issues that need to be addressed before publication
+* or you will receive a list of issues that need to be addressed before publication
 
-Private channels do not go through Roku certification and can be auto-published if it does not use pay-to-install Roku Billing.
+> :information_source: Private channels do not go through Roku certification review and can be auto-published if it does not use pay-to-install Roku Billing.
