@@ -29,7 +29,7 @@ Private channels are another way to distribute channels on the Roku platform. Th
 * Testing Roku-billed in-channel transactions (all purchases are treated as test transactions)<sup>2</sup>
 * QA and beta testing
 
-<sup>1</sup> Contact [advertising@roku.com]() for more details.
+<sup>1</sup> Contact [advertising@roku.com](mailto:advertising@roku.com) for more details.
 
 <sup>2</sup> Before enrolling in Roku Billing Services
 
@@ -37,7 +37,7 @@ Private channels are another way to distribute channels on the Roku platform. Th
 
 ## Create a public channel
 
-On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/apps)** and **Add Channel** on the following page.
+On the **[Developer Dashboard](https://developer.roku.com/developer)**, select **[Manage My Channels](https://developer.roku.com/developer-channels/channels)** and **Add Channel** on the following page.
 
 ![](../../images/add-new-channel.png)
 
