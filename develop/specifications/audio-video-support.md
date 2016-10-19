@@ -22,7 +22,7 @@ These have been tested and/or are currently in-use. Other formats or encodings m
  * [Device Specific Features](#device-specific-features)
 * [Supported Audio Formats](#supported-audio-formats)
 * [Best Practices](#best-practices)
- * [Dolby Audio Features & Recommendations](#dolby-audio-features-recommendations)
+ * [Dolby Audio Features & Recommendations](#dolby-audio-features--recommendations)
  * [4K UHD Video Streaming Recommendations](#4k-uhd-video-streaming-recommendations)
 
 ---
@@ -100,8 +100,8 @@ Roku devices support the following audio file types:
 * Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (EAC3)
 * Passthrough: DTS
 
-|   | AAC | AC3/EAC3 | DTS |
-| - | --- | -------- | --- |
+|                    | AAC | AC3/EAC3 | DTS |
+| ------------------ | --- | -------- | --- |
 | Decode/Passthrough | Decode<sup>1</sup> | Decode<sup>2</sup> | Passthrough
 | Sampling Rate      | 44.1 Khz, 48 Khz | 48Khz | Passthrough
 | Sample Size        | 16-bit | 16-bit | Passthrough
