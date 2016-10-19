@@ -1,5 +1,5 @@
 
-# Audio/Video Encoding Overview
+# Audio and Video Support
 _supported audio and video formats on Roku devices_
 
 ### Overview
@@ -22,6 +22,7 @@ These have been tested and/or are currently in-use. Other formats or encodings m
  * [Device Specific Features](#device-specific-features)
 * [Supported Audio Formats](#supported-audio-formats)
 * [Best Practices](#best-practices)
+ * [Dolby Audio Features & Recommendations](#dolby-audio-features-recommendations)
  * [4K UHD Video Streaming Recommendations](#4k-uhd-video-streaming-recommendations)
 
 ---
@@ -96,19 +97,20 @@ Roku devices support the following audio file types:
 * AIFF
 * FLAC
 * ALAC
-* Passthrough: Dolby Digital (AC3), Dolby Digital Plus (EAC3), DTS
+* Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (EAC3)
+* Passthrough: DTS
 
-|                    | AAC<sup>1</sup> | AC3/EAC3<sup>2</sup> | DTS |
-| ------------------ | --------------- | -------------------- | --- |
-| Decode/Passthrough | Decode | Passthrough | Passthrough
-| Sampling Rate      | 44.1 Khz, 48 Khz | As supported by sink device | As supported by sink device
-| Sample Size        | 16-bit | As supported by sink device | As supported by sink device
-| Bit rate           | 32-256 Kbps | As supported by sink device | As supported by sink device
-| Number of Channels | 2.0 | As supported by sink device | As supported by sink device
+|   | AAC | AC3/EAC3 | DTS |
+| - | --- | -------- | --- |
+| Decode/Passthrough | Decode<sup>1</sup> | Decode<sup>2</sup> | Passthrough
+| Sampling Rate      | 44.1 Khz, 48 Khz | 48Khz | Passthrough
+| Sample Size        | 16-bit | 16-bit | Passthrough
+| Bit rate           | 32-256 Kbps | 96-768 Kbps | Passthrough
+| Number of Channels | 2.0 | 2.0, 5.1, 7.1, Atmos | Passthrough
 
-> <sup>1</sup> Multichannel AAC is not supported on all Roku models. Roku TV’s and Roku 4 set-top-boxes support multichannel decode to PCM stereo.
+> <sup>1</sup> Multichannel AAC is not supported on all Roku models. Roku TVs, Roku 4, and Roku Ultra set-top-boxes support multichannel decode to PCM stereo.
 
-> <sup>2</sup> Roku TVs can decode AC3 and EAC3 to PCM stereo.
+> <sup>2</sup> Roku TVs and Roku Ultra can decode AC3 and EAC3. All other Roku devices will do passthrough to the receiving device. Roku Ultra supports the latest Dolby technologies such as Dolby Atmos and System Sound Mixing [(MS12)](http://www.dolby.com/us/en/professional/broadcast/products/dolby-ms12.html).
 
 ## Best Practices
 
@@ -119,6 +121,30 @@ Lowest and Highest bit rates:
 * Roku recommends encoding a low bit rate stream around 800Kbps.
 * Roku recommends the user have at least a 1.5Mbps connection.
 * Some customers will have low bit rate connections around 1Mbps or experience intermittent network load that causes drops below Roku recommended network speeds.
+
+### Dolby Audio Features & Recommendations
+
+With the Roku Ultra, Dolby Audio is natively integrated.
+Roku recommends encoding in Dolby Digital Plus instead of Dolby Digital.
+
+**Features include:**
+* Consistent audio delivery
+* System sound mixing [(MS12)](http://www.dolby.com/us/en/professional/broadcast/products/dolby-ms12.html)
+* Maximum compatibility with device end points
+
+Stereo and 5.1 content will natively decode on devices while 7.1 content will passthrough.
+
+When encoding in Dolby Digital Plus, the following bit rates are recommended:
+
+| Channels | Bit rate |
+| -------- | -------- |
+| Stereo 2.0 | 96 kbps
+| Multi-channel 5.1 | 192 kbps
+| Multi-channel 7.1 | 384 kbps
+
+> Developers can encode video content using services like Azure or Encoding.com.
+>
+> :information_source: For more information, visit http://developer.dolby.com
 
 ### 4K UHD Video Streaming Recommendations
 
