@@ -11,8 +11,10 @@ Testing Roku Channels involves using a debug console and access to a variety of 
 * [Accessing the debug console](#accessing-the-debug-console)
 * [Debug ports](#debug-ports)
 * [BrightScript debug console commands](#brightscript-debug-console-port-8085-commands)
-* [SceneGraph debug ports](#scenegraph-debug-ports)
 * [SceneGraph debug server commands](#scenegraph-debug-server-port-8080-commands)
+* [SceneGraph debug ports](#scenegraph-debug-ports)<sup>1</sup>
+
+<sup>1</sup> This section only applies for firmware v7.2 and below. As of firmware version 7.5, port 8089 - 8093 have been deprecated and thread info has been integrated into port 8085.
 
 ---
 
@@ -34,7 +36,7 @@ In addition to displaying console output, the shell can also be used as an inter
 | ------- | --------- | ------------------ |
 | 8080    | debug server | debug server containing a host of utilities
 | 8085    | Main()    | BrightScript runtime environment
-| 8087    | Screensavers | The starting point for screensavers.
+| 8087    | Screensavers | The starting point for screensavers
 
 ## BrightScript debug console (port 8085) commands
 
@@ -53,38 +55,61 @@ In addition to displaying console output, the shell can also be used as an inter
 | `last`	  | Print the last line that executed
 | `list`	  | List current function
 | `next`	  | Print the next line to execute
-| `print`, `p`, or `?`	| Print a variable or expression
-| `step`, `s`, or `t`	| Step one program statement
 | `over`	  | Step over function (_Available since firmware version 7.2_)
 | `out`	    | Step out of a function (_Available since firmware version 7.2_)
+| `print`, `p`, or `?`	| Print a variable or expression
+| `step`, `s`, or `t`	| Step one program statement
+| `threads`<sup>1</sup> | List all current executed suspended threads
+| `thread <ID>`<sup>1</sup> | Select a suspended thread to debug - all following debug commands will execute within that thread
 | `up` or `u`	| Move up the function context chain one
 | `var`	    | Print local variables and their types/values
 
-> :information_source: BrightScript statements can also be compiled and execute in the console. This can be used to change variables during execution or call a function that prints useful information about the state of your program.
+<sup>1</sup> This command is only available on firmware version 7.5 and greater.
+
+> :information_source: BrightScript statements can also be compiled and executed in the console. This can be used to change variables during execution or call a function that prints useful information about the state of your program.
 
 ## SceneGraph applications
 
-SceneGraph applications can be debugged using the same tools as previous Roku applications. However, there are some additional ports that can be used to debug specific threads of SceneGraph applications, and port 8085 has limited value in debugging SceneGraph applications.
+With **firmware version 7.5+**, the main debug port (8085) now provides context for all threads. This eliminates the need to have multiple telnet sessions open for each running thread and **ports 8089 - 8093 will no longer be used.**
+
+As seen below, any break or `stop` in the channel will suspend all threads. All threads will be listed with the following information:
+* **ID**: thread ID
+* **Location**: file the thread originated from and line number
+* **Source Code**: current line of code
+
+The current selected thread will be marked with an `*`.
+
+![](../../images/telnet-threads.png)
+
+> :information_source: This information can be recalled anytime during debugging using the `threads` command.
+
+### SceneGraph debug server (port 8080) commands
+| Command | Description |
+| ------- | ----------- |
+| `loaded_textures` | Displays the current set of images loaded into texture memory
+| `r2d2_bitmaps` | Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively.
+| `sgnodes all` | Prints every existing node created by the currently running channel
+| `sgnodes roots` | Prints every existing node without a parent created by the currently running channel. The existence of these unparented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global `m` or an associative array field of a node.
+| `sgnodes node_ID` | Prints nodes with an id field set to node_ID, except it bypasses all the hierarchy and rules, and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match.
+| `sgversion` `force` or `default` `1.0` or `1.1` | This command can be used to change the [observer callback model](https://sdkdocs.roku.com/display/sdkdoc/Handling+Application+Events-ObserverCallbackModels) and can also override the default `rsg_version` specified in the manifest. For example, `sgversion force 1.0` will set `rsg_version=1.0` regardless of what is specified in the manifest. With `default`, it will set the default `rsg_version` when it is not specified in the manifest. Changing the `rsg_version` will require restarting the channel but these changes will not survive a device reboot.
+
+> :information_source: These commands are similar to the getAll() , getRoots() ,  getRootsMeta(), and getAllMeta() [ifSGNodeChildren](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeChildren) methods, which can be called on any SceneGraph node.
+
+---
+
+**The following section only applies for firmware version 7.2 and below:**
 
 ## SceneGraph debug ports
 
-Because SceneGraph applications run on their own thread, and can also launch additional asynchronous threads using a Task node, five additional ports are available for debugging, as follows.
+> _SceneGraph applications can be debugged using the same tools as previous Roku applications. However, there are some additional ports that can be used to debug specific threads of SceneGraph applications, and port 8085 has limited value in debugging SceneGraph applications._
 
-| Port    | Thread    | Description        |
-| ------- | --------- | ------------------ |
+> _Because SceneGraph applications run on their own thread, and can also launch additional asynchronous threads using a Task node, five additional ports are available for debugging, as follows._
+
+> | Port | Thread | Description |
+| ---- | ------ | ----------- |
 | 8085    | Main()    | For SceneGraph applications, the Main() function only starts the SceneGraph application thread, so provides no debugging information about the SceneGraph application itself.
 | 8089    | SceneGraph| The main SceneGraph application thread. This contains all of the debugging information for SceneGraph applications, except for information returned from asynchronous threads launched by a Task node.
 | 8090    | First Task node thread | The first asynchronous thread launched by a Task node. If only one asynchronous thread is running after the Task node thread is launched, this port will show the debugging information for that thread.
 | 8091    | Second Task node thread | The second asynchronous thread launched by a Task node. If there are two asynchronous threads running after a Task node is launched, this port will show the debugging information for the second thread launched.
 | 8092    | Third Task node thread | The third asynchronous thread launched by a Task node. If there are three asynchronous threads running after a Task node is launched, this port will show the debugging information for the third thread launched.
 | 8093    | More than three task node threads | This port is used if there are more than three asynchronous threads that have been launched by a Task node. If there are more than three asynchronous threads running after a Task node is launched, this port will show all the debugging information for all the threads launched after the third asynchronous thread.
-
-### SceneGraph debug server (port 8080) commands
-| Command | Description |
-| ------- | ----------- |
-| `sgnodes all` | Prints every existing node created by the currently running channel
-| `sgnodes roots` | Prints every existing node without a parent created by the currently running channel. The existence of these unparented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global `m` or an associative array field of a node.
-| `sgnodes node_ID` | Prints nodes with an id field set to node_ID, except it bypasses all the hierarchy and rules, and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match.
-| `r2d2_bitmaps` | Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. |
-
-> :information_source: These commands are similar to the getAll() , getRoots() ,  getRootsMeta(), and getAllMeta() [ifSGNodeChildren](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeChildren) methods, which can be called on any SceneGraph node.
