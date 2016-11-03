@@ -92,6 +92,7 @@ The following categories of attributes are optional:
 | `hidden`    | integer | The hidden property tells the firmware to not display the app on the home screen. Hidden apps can still be launched over the network via the External Control API. | `hidden=1`
 | `playonly_aware` | integer | Attribute to specify the application responds to the Play Only remote control button event. If not set, the application will receive the Play event instead when the user selects the button. | `playonly_aware=1`
 | `rsg_version` | value | Set the SceneGraph [observer callback model](https://sdkdocs.roku.com/display/sdkdoc/Handling+Application+Events#HandlingApplicationEvents-ObserverCallbackModels). This defaults to `1.1` as of firmware v7.5 if it's not specified in the manifest. | `rsg_version=1.0`
+| `automatic_audio_guide_disabled` | integer | Set to `1` to disable Audio Guide within a channel. | `automatic_audio_guide_disabled=1`
 
 ## Screensaver Attributes
 
