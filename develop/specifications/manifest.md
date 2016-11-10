@@ -34,7 +34,7 @@ These are the minimum attributes required for every Roku channel:
 
 | Attribute | Type   | Description | Sample manifest entry | Specification |
 | --------- | ------ | ----------- | --------------------- | ------------- |
-| `title`   | string | name of the channel | `title="Roku Media Player"` ||
+| `title`   | string | name of the channel | `title=Roku Media Player` ||
 | `major_version` | integer | major portion of channel version | `major_version=1` ||
 | `minor_version` | integer | minor portion of channel version | `minor_version=2` ||
 | `build_version` | integer | build number | `build_version=150` ||
@@ -104,7 +104,7 @@ For [stand-alone screensavers](/develop/guides/screensavers.md#types-of-screensa
 
 | Attribute | Type   | Description | Sample manifest entry |
 | --------- | ------ | ----------- | --------------------- |
-| `screensaver_title`   | string | name of the screensaver displayed in Settings | `screensaver_title="Dog Screensaver"`
+| `screensaver_title`   | string | name of the screensaver displayed in Settings | `screensaver_title=Dog Screensaver`
 | `major_version` | integer | major portion of screensaver version | `major_version=1`
 | `minor_version` | integer | minor portion of screensaver version | `minor_version=2`
 | `build_version` | integer | build number | `build_version=150`
@@ -121,7 +121,7 @@ The following attributes are no longer required or used by Roku devices:
 
 | Attribute | Type   | Description | Sample manifest entry |
 | --------- | ------ | ----------- | --------------------- |
-| `subtitle`  | string | Short promotional description of your application for display beneath the title | `subtitle="providing the latest in cool videos"`
+| `subtitle`  | string | Short promotional description of your application for display beneath the title | `subtitle=providing the latest in cool videos`
 | `mm_icon_side_hd` | string | local URI for side unfocused image for HD | `mm_icon_side_hd=pkg:/images/side-hd.png`
 | `mm_icon_side_sd` | string | local URI for side unfocused image for SD | `mm_icon_side_sd=pkg:/images/side-sd.png`
 | `mm_icon_focus_sd` | string | Local URI for the channel poster image for SD | `mm_icon_focus_sd=pkg:/images/focus-sd.png`
