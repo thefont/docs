@@ -62,8 +62,8 @@ The function `playVideo()` takes our content node named `m.videoContent` that we
 
 ```brightscript
 Sub playVideo()
-    m.videoContent.url = RowList.content.getChild(m.RowList.rowItemFocused[0]).getChild(m.RowList.rowItemFocused[1].URL
-    ‘rowItemFocused[0] is the row and rowItemFocused[1] is the item index in the row
+    m.videoContent.url = RowList.content.getChild(m.RowList.rowItemFocused[0]).getChild(m.RowList.rowItemFocused[1].URL)
+    'rowItemFocused[0] is the row and rowItemFocused[1] is the item index in the row
 
     m.videoContent.streamFormat = "mp4"
     m.Video.content = m.videoContent
@@ -81,11 +81,11 @@ Lastly, to make sure the user is able to navigate back to the UI, we need a func
 ```brightscript
 Function onKeyEvent(key as String, press as Boolean) as Boolean ‘Maps back button to leave video
     if press
-    	if key = “back” If the back button is pressed
-		m.Video.visible = "false" ‘Hide video
-		m.Video.control = "stop" ‘Stop video from playing
+    	if key = "back" 'If the back button is pressed
+		m.Video.visible = "false" 'Hide video
+		m.Video.control = "stop" 'Stop video from playing
 		return true
-	end if
+        end if
     end if
 end Function
 ```
