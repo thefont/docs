@@ -24,12 +24,12 @@ In the `components` folder, open the `HomeScene.xml` file and the following code
 ```brightscript
 <children>
     <Video
-        id = “Video”
-        height = “1080”
+        id = "Video"
+        height = "1080"
         width = “1920”
-        enableUI = “false”
-        loop = “true”
-        visible = “false”/>
+        enableUI = "false"
+        loop = "true"
+        visible = "false"/>
 </children>
 ```
 
@@ -46,14 +46,14 @@ In `HomeScene.brs`, it’s important to set a pointer when the channel is loadin
 Add the following lines to the `init()` function in `HomeScene.brs`:
 
 ```brightscript
-m.Video = m.top.findNode(“Video”)
-m.videoContent = createObject(“roSGNode”, “ContentNode”)
+m.Video = m.top.findNode("Video")
+m.videoContent = createObject("roSGNode", "ContentNode")
 ```
 
 We also need to set an observer function that waits for an item to be selected in the RowList so that the content's meta-data can be mapped to the Video Node. Add the line below to the `init()` function:
 
 ```brightscript
-m.RowList.observerField(“rowItemSelected”, “playVideo”)
+m.RowList.observerField("rowItemSelected", "playVideo")
 ```
 
 This observer calls a function called `playVideo()` when an item is selected in our `RowList`.
@@ -65,10 +65,10 @@ Sub playVideo()
     m.videoContent.url = RowList.content.getChild(m.RowList.rowItemFocused[0]).getChild(m.RowList.rowItemFocused[1].URL
     ‘rowItemFocused[0] is the row and rowItemFocused[1] is the item index in the row
 
-    m.videoContent.streamFormat = “mp4”
+    m.videoContent.streamFormat = "mp4"
     m.Video.content = m.videoContent
-    m.Video.visible = “true”
-    m.Video.control = “play”
+    m.Video.visible = "true"
+    m.Video.control = "play"
 End Sub
 ```
 
@@ -82,8 +82,8 @@ Lastly, to make sure the user is able to navigate back to the UI, we need a func
 Function onKeyEvent(key as String, press as Boolean) as Boolean ‘Maps back button to leave video
     if press
     	if key = “back” If the back button is pressed
-		m.Video.visible = “false” ‘Hide video
-		m.Video.control = “stop” ‘Stop video from playing
+		m.Video.visible = "false" ‘Hide video
+		m.Video.control = "stop" ‘Stop video from playing
 		return true
 	end if
     end if
