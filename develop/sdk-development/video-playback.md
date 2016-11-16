@@ -53,7 +53,7 @@ m.videoContent = createObject("roSGNode", "ContentNode")
 We also need to set an observer function that waits for an item to be selected in the RowList so that the content's meta-data can be mapped to the Video Node. Add the line below to the `init()` function:
 
 ```brightscript
-m.RowList.observerField("rowItemSelected", "playVideo")
+m.RowList.observeField("rowItemSelected", "playVideo")
 ```
 
 This observer calls a function called `playVideo()` when an item is selected in our `RowList`.
