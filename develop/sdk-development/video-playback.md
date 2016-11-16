@@ -62,7 +62,7 @@ The function `playVideo()` takes our content node named `m.videoContent` that we
 
 ```brightscript
 Sub playVideo()
-    m.videoContent.url = RowList.content.getChild(m.RowList.rowItemFocused[0]).getChild(m.RowList.rowItemFocused[1].URL)
+    m.videoContent.url = m.RowList.content.getChild(m.RowList.rowItemFocused[0]).getChild(m.RowList.rowItemFocused[1]).URL
     'rowItemFocused[0] is the row and rowItemFocused[1] is the item index in the row
 
     m.videoContent.streamFormat = "mp4"
