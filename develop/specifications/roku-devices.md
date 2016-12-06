@@ -38,7 +38,7 @@ The following tables lists our devices over time - including Roku players, strea
 ### Current Models
 
 |  | Roku 1, Roku SE | Roku TV | 4K Roku TV | Roku Streaming Stick | Roku Express | Roku Express Plus | Roku Premiere | Roku Premier Plus | Roku Ultra |
-| - | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Code Name** | [Tyler](#tyler) | [Liberty](#liberty) | [Ft. Worth](#fort-worth) | [Briscoe](#briscoe) | [Littlefield](#littlefield) | Littlefield | [Cooper](#cooper) | Cooper | Cooper
 | **roDeviceInfo.GetModel()** | 2710X | 5000X | 6000X | 3600X | 3700X | 3710X | 4620X | 4630X | 4640X
 | **CPU** | MIPS 600 MHz | MIPS 1 GHz | ARM quad core | ARM Cortex A7 quad core 800 MHz | MIPS 900 MHz | MIPS 900 MHz | ARM Cortex A53 quad core 1.2 GHz | ARM Cortex A53 quad core 1.2 GHz | ARM Cortex A53 quad core 1.2 GHz
@@ -70,7 +70,7 @@ The following tables lists our devices over time - including Roku players, strea
 _These models are no longer manufactured but still run the latest Roku OS and are still supported._
 
 |   | Roku LT | Roku 2 HD | Roku 2 XD | Roku 2 XS | Roku LT | Roku HD | Roku Streaming Stick | Roku 3 | Roku LT | Roku 2 | Roku Streaming Stick | Roku 2 | Roku 3 | Roku 4
-| - | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Code Name** | [Giga](#giga) | Giga | Giga | Giga | [Paolo](#paolo) | Paolo | [Jackson](#jackson) | [Austin](#austin) | Tyler | Tyler | [Sugarland](#sugarland) | [Mustang](#mustang) | Mustang | [Dallas](#dallas)
 | **roDeviceInfo.GetModel()** | 2400X | 3000X | 3050X | 3100X | 2450X | 2500X | 3400X, 3420X | 4200X | 2700X | 2720X | 3500X | 4210X | 4230X | 4400X
 | **CPU** | ARM11 600 MHz | ARM11 600 MHz | ARM11 600 MHz | ARM11 600 MHz | MIPS 400 MHz | MIPS 400 MHz | ARM11 600 MHz | ARM Cortex A9 dual core 1 GHz | MIPS 600 MHz | MIPS 600 MHz | ARM11 600 MHz | ARM Cortex A9 dual core 1 GHz | ARM Cortex A9 dual core 1 GHz | ARM quad core
@@ -105,7 +105,7 @@ _These models are no longer manufactured but still run the latest Roku OS and ar
 _These models are discontinued and are no longer supported._
 
 |   | Roku DVP | Roku SD | Roku HD | Roku HD-XR | Roku HD | Roku XD | Roku XDS
-| - | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Code Name** | [Griffin](#griffin) | [Redwood](#redwood) | Redwood | Redwood | [Pico](#pico) | Pico | Pico
 | **roDeviceInfo.GetModel()** | N1000 | N1050 | N1100 | N1101 | 2000C | 2050X, 2050N | 2100X, 2100N
 | **CPU** | MIPS 400 MHz | MIPS 400 MHz | MIPS 400 MHz | MIPS 400 MHz | MIPS 400 MHz | MIPS 400 MHz | MIPS 400 MHz
