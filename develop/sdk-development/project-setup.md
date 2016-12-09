@@ -54,7 +54,7 @@ minor_version=0
 build_version=1
 
 mm_icon_focus_hd=pkg:/images/channel-poster.png
-splash_screen_fhd=pkg:/images/splash-screen.png
+splash_screen_fhd=pkg:/images/channel-splash.png
 ```
 
 ## Parsing an XML Feed
