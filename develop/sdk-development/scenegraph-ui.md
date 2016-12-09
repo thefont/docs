@@ -47,11 +47,11 @@ We will setup a simple main thread to create our `Screen` object and our message
 
 ```brightscript
 sub Main()
-    screen = CreateObject("roSGScreen") ‘Create Screen object
-    m.port = CreateObject("roMessagePort") ‘Create Message port
-    screen.setMessagePort(m.port)‘Set message port to listen to screen
+    screen = CreateObject("roSGScreen") 'Create Screen object
+    m.port = CreateObject("roMessagePort") 'Create Message port
+    screen.setMessagePort(m.port) 'Set message port to listen to screen
 
-    scene = screen.CreateScene("HomeScene") ‘ Create HomeScene
+    scene = screen.CreateScene("HomeScene") 'Create HomeScene
     screen.show()
 
     while(true) ‘Listens to see if screen is closed
