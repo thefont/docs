@@ -54,7 +54,7 @@ sub Main()
     scene = screen.CreateScene("HomeScene") 'Create HomeScene
     screen.show()
 
-    while(true) ‘Listens to see if screen is closed
+    while(true) 'Listens to see if screen is closed
         msg = wait(0, m.port)
         msgType = type(msg)
         if msgType = "roSGScreenEvent"
@@ -185,8 +185,6 @@ The `<rectangle>` and `<group>` below are nested within `<children>` on the same
   </Group>
 ```
 
-The completed `HomeScene.xml` file should now look [this](https://github.com/rokudev/scenegraph-ui-sample/blob/master/components/HomeScene.xml).
-
 ## 5. Populate the grid
 
 Now that all our nodes for the UI have been created, we need to populate them with content. This includes assigning the content from our XML feed to our `RowList` and setting the overhang to change based off the focused content in the `RowList`. This is most easily done in BrightScript. To keep our code clean, we will separate our BrightScript and XML in the HomeScene by pointing to a separate `.brs` file from our XML component.
@@ -281,16 +279,16 @@ If you've had a chance to build and run the channel thus far, you may have notic
 To make the grid more customizable, we'll use a separate function to "slice" up the array of content so that we can have a different number of items in each row. In `FeedParser.brs`, add the following function to the end of the file:
 
 ```brightscript
-function SelectTo(array as Object, num = 25 as Integer) as Object 'This method copies an array up to the defined number "num" (default 25)
+Function SelectTo(array as Object, num = 25 as Integer, start = 0 as Integer) as Object 'This method copies an array up to the defined number "num" (default 25)
     result = []
-    for each item in array
-        result.push(item)
+    for i = start to array.count()-1
+        result.push(array[i])
         if result.Count() >= num
             exit for
         end if
     end for
     return result
-end Function
+End Function
 ```
 
 Next, we'll need to modify the `loadContent()` function to incorporate our new `SelectTo()` function.
@@ -309,24 +307,24 @@ Sub loadContent()
         'second row in the grid with 5 items across
         {
             Title:"Row Two"
-            ContentList : SelectTo(oneRow, 5)
+            ContentList : SelectTo(oneRow, 5, 3)
         }
-        'third row in the grid with 15 items across
+        'third row in the grid with 5 items across
         {
             Title:"Row Three"
-            ContentList : SelectTo(oneRow, 15)
+            ContentList : SelectTo(oneRow, 5, 8)
         }
-        'fourth row in the grid with 5 items across
+        'fourth row in the grid with the remaining 2 items
         {
             Title:"Row Four"
-            ContentList : SelectTo(oneRow, 5)
+            ContentList : SelectTo(oneRow, 5, 13)
         }
     ]
     m.top.content = ParseXMLContent(list)
 End Sub
 ```
 
-In this example, the grid has been changed so it now shows 4 rows of content with: 3 items in the first row, 5 items in the second, 15 items in the third, and 5 items in the fourth row. Feel free to change these values to create your own custom grid layout.
+In this example, the grid has been changed so it now shows 4 rows of content with: 3 items in the first row, 5 items in the second, 5 items in the third, and the remaining 2 items in the fourth row.
 
 Here's what our finished UI looks like:
 
