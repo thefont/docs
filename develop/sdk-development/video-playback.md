@@ -26,7 +26,7 @@ In the `components` folder, open the `HomeScene.xml` file and the following code
     <Video
         id = "Video"
         height = "1080"
-        width = “1920”
+        width = "1920"
         enableUI = "false"
         loop = "true"
         visible = "false"/>
@@ -79,7 +79,7 @@ Now when an item in the `RowList` is selected, it will show a Video Node and pla
 Lastly, to make sure the user is able to navigate back to the UI, we need a function that maps the Back button on the remote to leave the video. To do this, we'll create a function responding to an `onKeyEvent()` back button press. With the function below, the video will stop playing and be hidden when the back button is pressed and return to the UI. Add the following code to the end of `HomeScene.brs`:
 
 ```brightscript
-Function onKeyEvent(key as String, press as Boolean) as Boolean ‘Maps back button to leave video
+Function onKeyEvent(key as String, press as Boolean) as Boolean 'Maps back button to leave video
     if press
     	if key = "back" 'If the back button is pressed
 		m.Video.visible = "false" 'Hide video
