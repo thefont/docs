@@ -100,10 +100,14 @@ Here's a table of common resolutions:
 
 | Display | Aspect Ratio | Width | Height |
 | ------- | ------------ | ----- | ------ |
-| SD | 4:3 | 240 | 180
+| SD | 4:3 | 240 | 160
 | HD | 4:3 | 320 | 240
 | HD | 16:9 | 320 | 180
 | HD | 2.35 | 320 | 136
+| FHD | 16:9 | 640 | 360
+| FHD | 2.35 | 640 | 272
+
+> :information_source: Although the tool generates FHD BIF files, they are not currently supported in the Roku OS.
 
 #### Executable Help
 ```
