@@ -71,7 +71,7 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, or `VP9` codecs.
 | TEE<sup>5</sup> | Yes | No
 | HDCP | 2.2 | 1.4
 
-For more device specifications, see [Roku Devices](/roku-devices.md).
+For more device specifications, see [Roku Devices](/develop/specifications/roku-devices.md).
 
 > <sup>1</sup> Only supported on **Roku 4K capable** devices.
 
