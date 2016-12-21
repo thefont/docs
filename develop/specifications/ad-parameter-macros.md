@@ -21,3 +21,4 @@ Here's a full list of the available parameters:
 | ROKU_ADS_TIMESTAMP | Current timestamp value (number of milliseconds elapsed since 00:00:00 1/1/1970 GMT)
 | ROKU_ADS_TRACKING_ID | RIDA value used for device identification
 | ROKU_ADS_USER_AGENT | Device model and firmware version
+| ROKU_ADS_KIDS_CONTENT | Mark ad requests as "directed towards children." This macro is designed to help your channel comply with the Children's Online Privacy Protection Act (COPPA)
