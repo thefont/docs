@@ -82,8 +82,12 @@ The following categories of attributes are optional:
 
 | Attribute | Type   | Description | Sample manifest entry |
 | --------- | ------ | ----------- | --------------------- |
-| `requires_aaxs_drm` | integer | Specifies that Adobe DRM is to be used with HLS streams. Use this if your HLS streams are protected with Adobe aaxs DRM. | `requires_aaxs_drm=1`
-| `requires_aaxs_version` | value | Specifies the version of aaxs to use. Currently Roku only supports version 1.0 | `requires_aaxs_version=1.0`
+| `requires_aaxs_drm` | integer | Downloads the required library to use Adobe Access DRM. | `requires_aaxs_drm=1`
+| `requires_aaxs_version` | value | Specifies the version of Adobe Access to use. Roku currently supports version 1.0. | `requires_aaxs_version=1.0`
+| `requires_verimatrix_drm` | integer | Downloads the required library to use Verimatrix DRM. | `requires_verimatrix_drm=1`
+| `requires_verimatrix_version` | value | Specifies the version of Verimatrix DRM to use. Roku currently supports version 1.0. | `requires_verimatrix_version=1.0`
+
+> See [Content Protection](/develop/specifications/content-protection.md) for implementation details.
 
 ### Special Purpose Attributes
 
