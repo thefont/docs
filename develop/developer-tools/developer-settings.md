@@ -26,14 +26,15 @@ Several utilties are provided in Developer Settings:
 * [Package Inspector](#package-inspector)
 * [Rekey Utility](#rekey-utility)
 * [Screenshot Utility](#screenshot-utility)
+* [BrightScript Profiler](#brightscript-profiler)
 
-![](../../images/dev-settings-screenshot-utility.png)
+![](../../images/profiling-data-utility.png)
 
 ### Package Inspector
 
 The package inspector is a utility to inspect the details of the package such as the developer ID used and the creation date. This is helpful for verifying the same developer ID is used when updating a package to ensure any channel registry data remains intact.
 
-Channel registry data will be lost when using a different developer ID to update a published channel.
+> :warning: Channel registry data will be lost when using a different developer ID to update a published channel.
 
 ### Rekey Utility
 
@@ -52,6 +53,12 @@ To take a screenshot:
 * Click on the screenshot button
 
 _Note: Screenshots will only work for sideloaded channels and static content (i.e. screenshots of video will not work). FHD (1920x1080) screenshots also require a 4K capable Roku set to 1080p or 4K UHD display type._
+
+### BrightScript Profiler
+
+The BrightScript Profiler gathers important metrics such as CPU usage, "wall-clock" time (the real world time for something to execute), and the number of times functions are called during the execution of your channel.
+
+See [BrightScript Profiler](/develop/developer-tools/bs-profiler.md) for more info.
 
 ## Application Packager
 

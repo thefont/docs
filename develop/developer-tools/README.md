@@ -1,13 +1,14 @@
 # Developer Tools
-Plugins, add-ons, and diagnostic tools for building Roku channels.
+_Plugins, add-ons, and diagnostic tools for building Roku channels_
 
-Sections:
+**Sections:**
 
 * [Developer Settings](#developer-settings)
 * [Roku Remote Webpage](#roku-remote-webpage)
 * [Deep link testing](#deep-link-testing)
 * [Stream Testing Tool](#stream-testing-tool)
 * [Roku Plugin for Eclipse](#roku-plugin-for-eclipse-ide)
+* [BrightScript Profiler](#brightscript-profiler)
 
 - - -
 
@@ -32,3 +33,9 @@ Sections:
 ## [Roku Plugin for Eclipse IDE](https://github.com/rokudev/docs/tree/master/develop/developer-tools/eclipse-plugin.md)
 [![Eclipse screenshot](https://github.com/rokudev/docs/raw/master/images/eclipse_1.png)](https://github.com/rokudev/docs/tree/master/develop/developer-tools/eclipse-plugin.md)
 [Roku Plugin for Eclipse IDE](https://github.com/rokudev/docs/tree/master/develop/developer-tools/eclipse-plugin.md) - A complete Eclipse Plugin Integrated Development Environment and the customizations needed to develop, test, package, and install channels on Roku devices.
+
+## [BrightScript Profiler](https://github.com/rokudev/docs/tree/master/develop/developer-tools/eclipse-plugin.md)
+
+![](../../images/profiler-log.png)
+
+[BrightScript Profiler](https://github.com/rokudev/docs/tree/master/develop/developer-tools/eclipse-plugin.md) - The BrightScript Profiler gathers important metrics such as CPU usage, "wall-clock" time (the real world time for something to execute), and the number of times functions are called during the execution of your channel.
