@@ -49,8 +49,8 @@ The `.bsprof` format is unique to Roku to ensure the format is as efficient and 
 
 The `.bsprof` file can be processed with the following command line utilities for Linux:
 
-* [bsprofdump_linux_i686](https://devtools.web.roku.com/profiler/linux_i686/bsprofdump_linux_i686.zip)
-* [bsprofdump_linux_x86_x64](https://devtools.web.roku.com/profiler/linux_x86_64/bsprofdump_linux_x86_64.zip)
+* **32-bit version:** [bsprofdump_linux_i686](https://devtools.web.roku.com/profiler/linux_i686/bsprofdump_linux_i686.zip)
+* **64-bit version:** [bsprofdump_linux_x86_x64](https://devtools.web.roku.com/profiler/linux_x86_64/bsprofdump_linux_x86_64.zip)
 
 **Sample command:**
 
