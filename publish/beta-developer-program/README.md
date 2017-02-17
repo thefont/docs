@@ -6,7 +6,7 @@ Beta OS access enables developers to test their channels for bugs before Roku OS
 
 ## How it works
 
-To be a part of the Roku Beta Developer Program, [activate a Roku Testing Portal account](https://rokutestingportal.centercode.com/callout/?callid=C3D70CF78CBB41C5906C7838A41F24BE) and complete the following application. If approved, developers will begin receiving beta OS builds within a few days of registering their first Roku device.
+To be a part of the Roku Beta Developer Program, [activate a Roku Testing Portal account](https://go.roku.com/dev-beta) and complete the following application. If approved, developers will begin receiving beta OS builds within a few days of registering their first Roku device.
 
 Approved participants in the Roku Beta Developer Program can:
 
@@ -29,4 +29,4 @@ Developers and channel publishers play a key role in shaping the Roku platform. 
 
 Thanks for building on the Roku platform!
 
-<p align="center"><a href="https://rokutestingportal.centercode.com/callout/?callid=C3D70CF78CBB41C5906C7838A41F24BE" target="_blank"><img class="aligncenter wp-image-1535 size-full" src="https://roku-developer-home-ghost-staging.s3.amazonaws.com/2016/Sep/QXBwbHlfTm93X2J1dHRvbl8xLTE0NzQ1NzY0MzE3NTU=.png" alt="Click to apply!" width="160" height="90"></a></p>
+<p align="center"><a href="https://go.roku.com/dev-beta" target="_blank"><img class="aligncenter wp-image-1535 size-full" src="https://roku-developer-home-ghost-staging.s3.amazonaws.com/2016/Sep/QXBwbHlfTm93X2J1dHRvbl8xLTE0NzQ1NzY0MzE3NTU=.png" alt="Click to apply!" width="160" height="90"></a></p>
