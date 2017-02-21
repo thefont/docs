@@ -8,7 +8,7 @@ Roku **officially** supports the following media formats:
 
 * Video file types: `MP4`, `MOV`, `M4V`, `MKV`, `WebM`
 * Video codecs: `H.264/AVC`, `HEVC/H.265`, `VP9`
-* Audio file types: `AAC`, `MP3`, `WMA`, `WAV (PCM)`, `AIFF`, `FLAC`, `ALAC`, `AC3`, `EAC3`
+* Audio file types: `AAC`, `MP3`, `WMA`, `WAV (PCM)`, `AIFF`, `FLAC`, `ALAC`, `AC3`, `E-AC3`
 * Streaming protocols: `HLS`, `Smooth`, `DASH`
 
 These have been tested and/or are currently in-use. Other formats or encodings may be supported, but should be evaluated on a case by case basis.
@@ -95,10 +95,12 @@ Roku devices support the following audio file types:
 * AIFF
 * FLAC
 * ALAC
-* Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (EAC3)
+* Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (E-AC3)
 * Passthrough: DTS
 
-|                    | AAC | AC3/EAC3 | DTS |
+We strongly recommend that content that is available with multichannel audio (i.e., 5.1, 7.1 channels) be made available in Dolby Digital Plus (E-AC3) as the preferred multichannel format for streaming on our Dolby Digital Plus enabled devices.
+
+|                    | AAC | AC3/E-AC3 | DTS |
 | ------------------ | --- | -------- | --- |
 | Decode/Passthrough | Decode<sup>1</sup> | Decode<sup>2</sup> | Passthrough
 | Sampling Rate      | 44.1 Khz, 48 Khz | 48Khz | Passthrough
@@ -108,7 +110,7 @@ Roku devices support the following audio file types:
 
 > <sup>1</sup> Multichannel AAC is not supported on all Roku models. Roku TVs, Roku 4, and Roku Ultra set-top-boxes support multichannel decode to PCM stereo.
 
-> <sup>2</sup> Roku TVs and Roku Ultra can decode AC3 and EAC3. All other Roku devices will do passthrough to the receiving device. Roku Ultra supports the latest Dolby technologies such as Dolby Atmos and System Sound Mixing [(MS12)](http://www.dolby.com/us/en/professional/broadcast/products/dolby-ms12.html).
+> <sup>2</sup> Roku TVs and Roku Ultra can decode AC3 and E-AC3. All other Roku devices will do passthrough to the receiving device. Roku Ultra supports the latest Dolby technologies such as Dolby Atmos and System Sound Mixing [(MS12)](http://www.dolby.com/us/en/professional/broadcast/products/dolby-ms12.html).
 
 ## Encoding Guidelines
 
