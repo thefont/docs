@@ -47,10 +47,14 @@ The `.bsprof` format is unique to Roku to ensure the format is as efficient and 
 
 ## Processing the data
 
-The `.bsprof` file can be processed with the following command line utilities for Linux:
+After you've downloaded the `.bsprof` file, the data can be viewed using the BrightScript Profiler Visualization Tool: https://devtools.web.roku.com/profiler/viewer/
 
-* **32-bit version:** [bsprofdump_linux_i686](https://devtools.web.roku.com/profiler/linux_i686/bsprofdump_linux_i686.zip)
-* **64-bit version:** [bsprofdump_linux_x86_x64](https://devtools.web.roku.com/profiler/linux_x86_64/bsprofdump_linux_x86_64.zip)
+![](../../images/visualization-tool.png)
+
+Alternatively, the `.bsprof` file can also be processed with the following command line utilities for Linux:
+
+* **Linux 32-bit version:** [bsprofdump_linux_i686](https://devtools.web.roku.com/profiler/linux_i686/bsprofdump_linux_i686.zip)
+* **Linux 64-bit version:** [bsprofdump_linux_x86_x64](https://devtools.web.roku.com/profiler/linux_x86_64/bsprofdump_linux_x86_64.zip)
 
 **Sample command:**
 
