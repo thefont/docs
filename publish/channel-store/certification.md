@@ -3,17 +3,17 @@
 In order to assure the overall quality of the Roku Platform, all public channels in the Roku Channel Store must first be reviewed for quality, design, and performance criteria before being published. This certification process also ensures that new additions to the Channel Store properly integrate our latest platform initiatives.
 
 ## Preparing for certification
-To minimize the duration of the certification process, developers should download and review our [Pre-certification Checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2) before submitting their channels. The checklist includes the complete list of issues we check for during reviews, as well as a list of every Roku device name and model number we’ve ever released.
+To minimize the duration of the certification process, developers should download and review our [Pre-certification Checklist](https://sdkdocs.roku.com/display/sdkdoc/Pre-certification+Check+List?preview=%2F3737121%2F4264904%2FRoku-Channel-Certification-Checklist_v3.0.xlsx) before submitting their channels. The checklist includes the complete list of issues we check for during reviews, as well as a list of every Roku device name and model number we’ve ever released.
 
-### [Download the Pre-certification Checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2)
+### [Download the Pre-certification Checklist](https://sdkdocs.roku.com/display/sdkdoc/Pre-certification+Check+List?preview=%2F3737121%2F4264904%2FRoku-Channel-Certification-Checklist_v3.0.xlsx)
 
-[![Certification spreadsheet thumbnail](../../images/Screen Shot 2016-08-09 at 4.47.16 PM.png)](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2)
+[![Certification spreadsheet thumbnail](../../images/Screen Shot 2016-08-09 at 4.47.16 PM.png)](https://sdkdocs.roku.com/display/sdkdoc/Pre-certification+Check+List?preview=%2F3737121%2F4264904%2FRoku-Channel-Certification-Checklist_v3.0.xlsx)
 
 > :information_source: Note: We are constantly updating the checklist, so be sure to always check the latest copy for new requirements before submitting a channel.
 
 ### QA test channels before submitting
 
-Due to the high volume of channels submitted to the Roku Platform daily, our certification process can not and does not replace a developer’s own responsibility to rigorously test their channels for bugs. Developers are expected to use this [Pre-certification Checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2) as a tool to guide their own internal quality assurance testing before submitting their channels for review.
+Due to the high volume of channels submitted to the Roku Platform daily, our certification process can not and does not replace a developer’s own responsibility to rigorously test their channels for bugs. Developers are expected to use this [Pre-certification Checklist](https://sdkdocs.roku.com/display/sdkdoc/Pre-certification+Check+List?preview=%2F3737121%2F4264904%2FRoku-Channel-Certification-Checklist_v3.0.xlsx) as a tool to guide their own internal quality assurance testing before submitting their channels for review.
 
 ### Testing via private channels
 
@@ -22,7 +22,7 @@ Many developers chose to first publish their channels as private channels before
 ### Testing across multiple devices
 
 Developers must also be sure to test their channels on multiple types of Roku devices before submitting. Higher-end Roku players have greater processing power and increased memory, so what works on a newer device may be need to be degraded for models with lesser capabilities.
-When receiving feedback from viewers on a private channel, be sure to ask for their device model number. Use the “Device List” sheet in the [Pre-certification Checklist](https://sdkdocs.roku.com/download/attachments/3737121/Roku-Channel-Certification-Checklist_v2.0.xlsx?version=8&modificationDate=1467219288542&api=v2) to group feedback by model type.
+When receiving feedback from viewers on a private channel, be sure to ask for their device model number. Use the “Device List” sheet in the [Pre-certification Checklist](https://sdkdocs.roku.com/display/sdkdoc/Pre-certification+Check+List?preview=%2F3737121%2F4264904%2FRoku-Channel-Certification-Checklist_v3.0.xlsx) to group feedback by model type.
 
 ## Submitting your channel
 
