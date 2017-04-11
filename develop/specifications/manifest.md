@@ -49,12 +49,13 @@ The following categories of attributes are optional:
 | --------- | ------ | ----------- | --------------------- | ------------- |
 | `splash_color` | hex value | background color to use if the splash screen image is not full screen | `splash_color=#121212`
 | `splash_min_time`<sup>1</sup> | integer | minimum amount of time (in milliseconds) to display the splash screen | `splash_min_time=1500`
-| `splash_screen_hd`<sup>2</sup> | string | local URI for the HD splash screen | `splash_screen_fhd=pkg:/images/splash-screen.png` | 1280x720
-| `splash_screen_sd`<sup>2</sup> | string | local URI for the SD splash screen | `splash_screen_fhd=pkg:/images/splash-screen.png` | 720x480
+| `splash_screen_hd`<sup>2</sup> | string | local URI for the HD splash screen | `splash_screen_hd=pkg:/images/splash-screen.png` | 1280x720
+| `splash_rsg_optimization` | integer | Set this attribute to remove the black screen flash issue in SceneGraph channels. This is only applicable for SceneGraph channels and only if the first screen is a SceneGraph component. <br><br>_Available since firmware version 7.6_ | `splash_rsg_optimization=1`
 
-> <sup>1</sup> If no value is specified, then 1600 (1.6 seconds) is used. If 0 is specified, then there is no default time, so the splash screen disappears as soon as the application displays its first screen.   (This may result in the appearance of flashing, if your application shows its first screen quickly).
 
-> <sup>2</sup> The FHD splash screen image is scaled down for HD and SD display modes but this attribute can be used to specify a resolution-specific splash screen image.
+> <sup>1</sup> If no value is specified, then 1600 (1.6 seconds) is used. If 0 is specified, then there is no default time, so the splash screen disappears as soon as the application displays its first screen. (This may result in the appearance of flashing, if your application shows its first screen quickly).
+
+> <sup>2</sup> The FHD splash screen image is scaled down for HD display mode but this attribute can be used to specify a resolution-specific splash screen image.
 
 ### Graphics Scaling Attributes
 
@@ -132,3 +133,4 @@ The following attributes are no longer required or used by Roku devices:
 | `mm_icon_side_sd` | string | local URI for side unfocused image for SD | `mm_icon_side_sd=pkg:/images/side-sd.png`
 | `mm_icon_focus_sd` | string | Local URI for the channel poster image for SD | `mm_icon_focus_sd=pkg:/images/focus-sd.png`
 | `requires_bluetooth` | integer | Specifies that a Bluetooth remote must be linked to the box to launch the app. If not, a dialog box is presented to the user. This attribute has been superseded by `requires_gaming_remote`.	 | `requires_bluetooth=1`
+| `splash_screen_sd` | string | local URI for the SD splash screen (720x480) | `splash_screen_sd=pkg:/images/splash-screen.png`
