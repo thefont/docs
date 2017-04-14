@@ -8,7 +8,7 @@ The BrightScript Profiler gathers important metrics such as CPU usage, "wall-clo
 
 **Sections:**
 
-* [Requirements](#requirements)
+* [Required manifest entries](#required-manifest-entries)
 * [Collecting the data](#collecting-the-data)
 * [Processing the data](#processing-the-data)
 * [Understanding the data](#understanding-the-data)
@@ -16,15 +16,7 @@ The BrightScript Profiler gathers important metrics such as CPU usage, "wall-clo
 
 ---
 
-## Requirements
-
-### Roku OS
-
-The BrightScript Profiler tool will be publicly available in the next Roku OS release but you can get early access and test out the tool now through the Beta Developer Program.
-
-<p align="center"><a href="https://go.roku.com/dev-beta" target="_blank"><img class="aligncenter wp-image-1535 size-full" src="https://roku-developer-home-ghost-staging.s3.amazonaws.com/2016/Sep/YmV0YV9kZXZlbG9wZXJfcHJvZ3JhbV8xMDI0eDI0OC0xNDc0NTc2MDA3NDgz.png" alt="Click to apply!"></a></p>
-
-### Manifest entries
+## Required manifest entries
 
 Two new manifest entries are required to use the profiler:
 
