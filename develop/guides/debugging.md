@@ -12,9 +12,6 @@ Testing Roku Channels involves using a debug console and access to a variety of 
 * [Debug ports](#debug-ports)
 * [BrightScript debug console commands](#brightscript-debug-console-port-8085-commands)
 * [SceneGraph debug server commands](#scenegraph-debug-server-port-8080-commands)
-* [SceneGraph debug ports](#scenegraph-debug-ports)<sup>1</sup>
-
-<sup>1</sup> This section only applies for firmware v7.2 and below. As of firmware version 7.5, port 8089 - 8093 have been deprecated and thread info has been integrated into port 8085.
 
 ---
 
@@ -98,22 +95,3 @@ The current selected thread will be marked with an `*`.
 | `sgversion` `force` or `default` `1.0` or `1.1` | This command can be used to change the [observer callback model](https://sdkdocs.roku.com/display/sdkdoc/Handling+Application+Events-ObserverCallbackModels) and can also override the default `rsg_version` specified in the manifest. For example, `sgversion force 1.0` will set `rsg_version=1.0` regardless of what is specified in the manifest. With `default`, it will set the default `rsg_version` when it is not specified in the manifest. Changing the `rsg_version` will require restarting the channel but these changes will not survive a device reboot.
 
 > :information_source: These commands are similar to the getAll() , getRoots() ,  getRootsMeta(), and getAllMeta() [ifSGNodeChildren](https://sdkdocs.roku.com/display/sdkdoc/ifSGNodeChildren) methods, which can be called on any SceneGraph node.
-
----
-
-**The following section only applies for firmware version 7.2 and below:**
-
-## SceneGraph debug ports
-
-_SceneGraph applications can be debugged using the same tools as previous Roku applications. However, there are some additional ports that can be used to debug specific threads of SceneGraph applications, and port 8085 has limited value in debugging SceneGraph applications._
-
-_Because SceneGraph applications run on their own thread, and can also launch additional asynchronous threads using a Task node, five additional ports are available for debugging, as follows._
-
-| Port | Thread | Description |
-| ---- | ------ | ----------- |
-| 8085    | Main()    | For SceneGraph applications, the Main() function only starts the SceneGraph application thread, so provides no debugging information about the SceneGraph application itself.
-| 8089    | SceneGraph| The main SceneGraph application thread. This contains all of the debugging information for SceneGraph applications, except for information returned from asynchronous threads launched by a Task node.
-| 8090    | First Task node thread | The first asynchronous thread launched by a Task node. If only one asynchronous thread is running after the Task node thread is launched, this port will show the debugging information for that thread.
-| 8091    | Second Task node thread | The second asynchronous thread launched by a Task node. If there are two asynchronous threads running after a Task node is launched, this port will show the debugging information for the second thread launched.
-| 8092    | Third Task node thread | The third asynchronous thread launched by a Task node. If there are three asynchronous threads running after a Task node is launched, this port will show the debugging information for the third thread launched.
-| 8093    | More than three task node threads | This port is used if there are more than three asynchronous threads that have been launched by a Task node. If there are more than three asynchronous threads running after a Task node is launched, this port will show all the debugging information for all the threads launched after the third asynchronous thread.
